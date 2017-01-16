@@ -20,6 +20,14 @@ export default {
   },
   methods:{
     listening(message){
+      var data = { message: message };
+      fetch('/tweet', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
       this.items.push({message: message});
     },
     startLisning(){
