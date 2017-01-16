@@ -2,6 +2,19 @@
 
 WebなAPIです　
 
+## Run
+1. .envにアプリケーション情報を書く(.env.sampleを参考にして)
+
+2. 以下を実行
+
+```
+npm install
+npm run build
+node server.js
+```
+
+3. localhost:3000にサーバーが立つのでChromeでアクセスしボタンを押すと開始
+
 ## Build Setup
 
 ``` bash
