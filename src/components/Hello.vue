@@ -8,8 +8,8 @@
 </template>
 
 <script>
-let speach = new webkitSpeechRecognition();
-speach.lang = 'ja';
+let speech = new webkitSpeechRecognition();
+speech.lang = 'ja';
 export default {
   name: 'hello',
   data: () => {
@@ -31,14 +31,14 @@ export default {
       this.items.push({message: message});
     },
     startLisning(){
-      console.dir(speach);
-      speach.addEventListener('result', (e) => {
+      console.dir(speech);
+      speech.addEventListener('result', (e) => {
         this.listening(e.results[0][0].transcript);
       });
-      speach.addEventListener('end', function(){
-        speach.start();
+      speech.addEventListener('end', function(){
+        speech.start();
       });
-      speach.start();
+      speech.start();
     }
   }
 }
